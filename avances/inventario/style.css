@@ -1,0 +1,548 @@
+/* ==========================================
+   RESET Y BASE
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f182a;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   MENÚ LATERAL (sidebar)
+   ========================================== */
+.sidebar {
+    width: 260px;
+    background: #0a1020;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 25px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo / nombre */
+.nombre_comercio {
+    text-align: center;
+    padding: 0 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nombre_comercio h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nombre_comercio h1 span {
+    color: #1a73e8; /* Acento azul */
+}
+
+.nombre_comercio p {
+    font-size: 12px;
+    color: #7a8a9a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+/* Navegador (menú de opciones) */
+.navegador {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.navegador ul {
+    list-style: none;
+}
+
+.navegador ul li {
+    margin: 4px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.navegador ul li:hover {
+    background: rgba(26, 115, 232, 0.2);
+    border-left: 3px solid #1a73e8;
+}
+
+.navegador ul li.active {
+    background: rgba(26, 115, 232, 0.2);
+    border-left: 3px solid #1a73e8;
+}
+
+.navegador ul li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+    color: #b0c4d8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.navegador ul li a i {
+    width: 20px;
+    font-size: 18px;
+    color: #5a7a9a;
+    transition: color 0.2s;
+}
+
+.navegador ul li:hover a {
+    color: #ffffff;
+}
+
+.navegador ul li:hover a i {
+    color: #1a73e8;
+}
+
+.navegador ul li.active a {
+    color: #ffffff;
+}
+
+.navegador ul li.active a i {
+    color: #1a73e8;
+}
+
+
+
+
+
+
+
+/* Cerrar sesión */
+.sidebar-footer {
+    padding: 20px 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-logout i {
+    font-size: 18px;
+}
+
+.btn-logout:hover {
+    background: rgba(211, 47, 47, 0.1);
+    border-color: #d32f2f;
+    color: #ff5252;
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+   ========================================== */
+.contenido_principal {
+    flex: 1;
+    padding: 25px 30px;
+    background: #0f182a;
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   BARRA DE HERRAMIENTAS (navegador_principal)
+   ========================================== */
+.navegador_principal {
+    background: rgba(26, 115, 232, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+/* Botones de la barra */
+.agregar_producto,
+.agregar_merma,
+.exportar_inventario {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.agregar_producto {
+    background: #0a1020;
+    color: #ffffff;
+}
+
+.agregar_producto:hover {
+    background: #0cd150;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.exportar_inventario{
+
+    background: #0a1020;
+    color: #ffffff;
+}
+
+.exportar_inventario:hover {
+    background: #0b6bfd;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+
+.agregar_merma {
+
+    background: #0a1020;
+    color: #ffffff;
+}
+
+.agregar_merma:hover {  
+    background: #d32f2f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+
+/* Input de búsqueda */
+.navegador_principal input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 16px 10px 40px;
+    border: 1px solid #d0d7e3;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f5f7fa url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%237a8a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>') no-repeat 14px center;
+    background-color:#0a1020;
+    color: #ffffff;
+    font-weight: bolder;
+    background-size: 18px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.navegador_principal input[type="text"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   TABLA
+   ========================================== 
+*/
+
+.tabla_contenedor{
+
+    background: rgba(26, 115, 232, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+}
+
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    background: #0a1020;
+    border: 2px white;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    font-size: 14px;
+
+    
+}
+
+/* Encabezados */
+table th {
+    background: #f5f7fa;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0e4ea;
+}
+
+/* Celdas */
+table td {
+    padding: 12px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+
+/* Hover en filas */
+table tbody tr:hover {
+    background: rgba(26, 115, 232, 0.2);
+    transition: background 0.15s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   Estilos para los formularios
+   ========================================== 
+*/
+
+
+.fondo_oscuro{
+
+
+    background-color: black;
+    opacity: 0.4;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+
+.formulario_producto, .formulario_merma{
+    position: fixed;
+    background-color: #0a1020;
+    width: 30%;
+    height: 43%;
+    margin-left: 35%;
+    margin-top: 8%;
+    border-radius: 20px;
+    border: solid 2px white;
+    display: none;
+}
+
+
+.fondo_formulario{
+
+    background-color:rgba(26, 115, 232, 0.2);
+    width: 100%;
+    margin: 0;
+    padding: 5%;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: solid white 3px;
+
+}
+
+.fondo_formulario h1{
+
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(0.8em, 1.2vw, 1.8em); 
+
+}
+
+
+.fondo_formulario h2{
+
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(0.7em, 1.1vw, 1.7em); 
+    margin-top: 2%;
+
+}
+
+
+
+.contenido_formulario{
+
+    padding: 5%;
+    text-align: center;
+    background: #0a1020;
+    color: #ffffff;
+
+}
+
+.contenido_formulario p{
+
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 3%;
+    font-size: clamp(0.8em, 1.2vw, 1.5em); 
+}
+
+.contenido_formulario input{
+
+    background-color: rgba(26, 115, 232, 0.2);
+    color: white;
+    padding: 2%;
+    border: solid 2px white;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    outline: none;
+    font-size: clamp(0.6em, 0.8vw, 1em); 
+}
+
+
+
+
+.contenido_formulario input:hover{
+
+    background-color: white;
+    color: black;
+
+}
+
+
+
+
+.botonera_formulario{
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-left: 5%;
+    margin-top: 10%;
+
+}
+
+
+
+
+
+.botonera_formulario button, .salir_formulario{
+
+    background: #0a1020;
+    color: #ffffff;
+    width: 80%;
+    padding: 5%;
+    border-radius: 10px;
+    background: rgba(26, 115, 232, 0.2); /* color azul principal */
+    color: #ffffff;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: clamp(0.8em, 1.2vw, 1.5em); 
+    
+}
+
+.salir_formulario:hover, .salir_merma:hover {  
+    background: #d32f2f;
+    transform: translateY(-2px);
+}
+
+
+.volver_formulario:hover, .volver_merma:hover {  
+    background: #0b6bfd;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.siguiente_formulario:hover, .enviar_formulario:hover, .enviar_merma:hover, .siguiente_merma:hover  {  
+    background: #0cd150;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.formulario_producto .enviar_formulario, .enviar_merma{
+    display: none;
+}
