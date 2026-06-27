@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!--  
+
+    =====================================================
+    ===  Fondo oscuro y formularios ocultos 
+    =====================================================
+
+    -->
+
+    <div class="fondo_oscuro"></div>
+
+
+    <!--  Formulario Agregar Categoria -->
+
+    <form class="formulario_categoria">
+        
+
+        <div class="fondo_formulario">
+            
+            <h1>Inversiones Hermanos Fernandez</h1>
+            <h2>Agregar Producto</h2>
+
+        </div>
+
+
+        <div class="contenido_formulario">
+
+
+            <p class="identificador_formulario">ID Categoria</p>
+            <input type: text id = "input_id"       placeholder="ID">
+            <input type: text id = "input_nombre"   placeholder="NOMBRE"> 
+            <input type: text id = "input_descripcion"   placeholder="DESCRIPCION"> 
+
+
+
+            <br>
+
+
+            <div class="botonera_formulario">
+            
+                <button class="volver_formulario"   type="button">Volver</button>
+                <button class="salir_formulario"    type="button"><i class="fas fa-power-off"></i></button>
+                <button class="siguiente_formulario"type="button" >Sig</button>
+                <button class="enviar_formulario"   type="submit">Enviar</button>
+
+
+            </div>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Formulario Eliminar Categoria -->
+
+    <form class="formulario_eliminar">
+
+
+        <div class="fondo_formulario">
+            
+            <h1>Inversiones Hermanos Fernandez</h1>
+            <h2>Agregar Merma</h2>
+
+        </div>
+
+
+        <div class="contenido_formulario">
+
+
+            <p class="identificador_merma">ID Categoria</p>
+            <input type: text placeholder="ID"       id = "id_categoria">
+
+
+
+            <br>
+
+
+            <div class="botonera_formulario" id="botonera_formulario_eliminar">
+            
+                <button class="volver_eliminar"      type="button">Volver</button>
+                <button class="enviar_eliminar"      type="submit">Enviar</button>
+
+
+            </div>
+
+        </div>
+
+    </form>
+    
+
+
+
+
+
+    <!--  
+
+    =====================================================
+    ===  Menu lateral o nav de la ventana 
+    =====================================================
+
+    -->
+
+
+
+    <div class="dashboard">
+      
+        
+        <aside class="sidebar">
+
+            <div class="nombre_comercio">
+                <h1> Logo o nombre </h1>
+            </div>
+
+
+            <nav class="navegador">
+            
+                <ul>
+            
+            
+                    <li>
+                        <a href="#"> <span>Inicio</span></a>
+                    </li>
+
+                    <li class="active">
+                        <a href="#"> <span>Categoria</span></a>
+                    </li>
+            
+                    <li>
+                        <a href="#"></i> <span>Personal</span></a>
+                    </li>
+            
+
+                    <li>
+                        <a href="#"> <span>Inventario</span></a>
+                    </li>
+            
+                    <li>
+                        <a href="#"> <span>Gestión interna</span></a>
+                    </li>
+            
+                    <li>
+                        <a href="#"><span>Ventas / Taller</span></a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+
+            <div class="sidebar-footer">
+            
+                <a href="" class="btn-logout"> <b> Cerrar sesion </b> </a>
+            
+            </div>
+
+        </aside>
+
+
+
+
+
+
+        <!--  
+
+        =====================================================
+        ===  Contenido principal de toda la ventana inventario
+        =====================================================
+
+        -->
+    
+        <div class="contenido_principal">
+            
+
+            <!--  Botonera y buscador  -->
+            <nav class="navegador_principal">
+                
+                <button class = "agregar_categoria" >Agregar Categoria</button>
+                <button class = "eliminar_categoria" >Eliminar Categoria</button>
+                <input type="text">
+
+            </nav>
+
+
+
+
+            <!--  Tabla de contenido que muestra los productos  -->
+
+            <div class="tabla_contenedor">
+
+                <table border="">
+                
+                    <!--  Aqui se mostrara las filas que refleja los datos de la BD alamcenados  -->
+                    <tr>
+
+                        <td>ID</td>
+                        <td>Nombre</td>
+                        <td>Descripcion</td>
+                    
+                    </tr>
+
+
+                <!-- Prueba visual -->
+        
+                    <tr>
+
+                        <td>0001</td>
+                        <td>AAA1</td>
+                        <td>Almacen para los cauchos premiun</td>
+                    
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+
+    <!--  
+
+    =====================================================
+    ===  Importando los documentos JS 
+    =====================================================
+
+    -->
+
+<script src="vista_agregar_eliminar.js"></script>
+<script src="vista_agregar_categoria.js"></script>
+
+</body>
+
+</html>
