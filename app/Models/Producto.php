@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+
+class Producto extends Model
+{
+    use HasFactory;
+
+    protected $table = 'productos';
+    protected $fillable = ['codigo', 'nombre', 'marca', 'medida_tecnica', 'stock_actual', 'stock_minimo', 'costo_compra', 'precio_venta', 'estado_logico', 'id_categoria',];
+
+
+     // Relación con categoría (pertenece a)
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'id_categoria');
+    }
+
+}
