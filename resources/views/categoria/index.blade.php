@@ -134,9 +134,8 @@
 
 
     <div class="dashboard">
-      
-        
-        <aside class="sidebar">
+
+        <aside class="panel_control">
 
             <div class="nombre_comercio">
                 <h1> Logo o nombre </h1>
@@ -147,16 +146,85 @@
             
                 <ul>
             
-                    <li class="active"><a href="#"> <span>Inicio</span></a></li>
+                    <!--
+                    =============== 
+                    ==  Inicio
+                    ===============
+                    -->
+
+                    <li class="nav_inicio"> <button> Inicio </button> </li>
             
-                    <li><a href="#"></i> <span>Personal</span></a></li>
+                    <!-- navegador contenedor de los links URL-->
+                    <ul id="direcciones" class="link_inicio">
+                        <li class="activo_link"> <a href="">  1 </a></li>
+                        <li> <a href="">  2 </a></li>
+                        <li> <a href="">  3 </a></li>
+                    </ul>
+                    
             
-                    <li><a href="#"> <span>Inventario</span></a></li>
+                    <!--
+                    =============== 
+                    ==  Personal
+                    ===============
+                    -->
+
+                    <li class="nav_personal"> <button> Personal y Seguridad </button> </li>
+                    
+                    <ul id="direcciones" class="link_personal">
+                        <li> <a href="">  1 </a></li>
+                        <li> <a href="">  2 </a></li>
+                        <li> <a href="">  3 </a></li>
+                    </ul>
+                    
+                    
+                    <!--
+                    =============== 
+                    ==  Gestion interna
+                    ===============
+                    -->
+
+                    <li class="nav_gestion"> <button> Gestion Interna </button> </li>
             
-                    <li><a href="#"> <span>Gestión interna</span></a></li>
+                    <ul id="direcciones" class="link_gestion">
+                        <li> <a href="">  1 </a></li>
+                        <li> <a href="">  2 </a></li>
+                        <li> <a href="">  3 </a></li>
+                    </ul>
+
+
+
+                    <!--
+                    =============== 
+                    ==  Inventario
+                    ===============
+                    -->
+
+
+                    <li class="nav_inventario"> <button class="activo"> Inventario </button> </li>
             
-                    <li><a href="#"><span>Ventas / Taller</span></a></li>
+                    <ul id="direcciones" class="link_inventario">
+                        <li>                     <a href="/productos">  Almacen    </a></li>
+                        <li class="activo_link"> <a href="/categoria">  Categorias </a></li>
+                        <li>                     <a href="/merma">      Merma      </a></li>
+                    </ul>
+                    
+
+
+                    <!--
+                    =============== 
+                    ==  Ventas y Taller
+                    ===============
+                    -->
+
+                    <li class="nav_ventas"> <button> Ventas y Taller </button> </li>
             
+                    <ul id="direcciones" class="link_ventas">
+                        <li> <a href="">  1 </a></li>
+                        <li> <a href="">  2 </a></li>
+                        <li> <a href="">  3 </a></li>
+                    </ul>
+                    
+                    
                 </ul>
             
             </nav>
@@ -173,11 +241,9 @@
 
 
         <!--  
-
         =====================================================
         ===  Contenido principal de toda la ventana inventario
         =====================================================
-
         -->
     
         <div class="contenido_principal">
@@ -188,8 +254,10 @@
             <nav class="navegador_principal">
                 
                 <button id="nav_verde"class = "agregar_categoria" >Agregar Categoria</button>
-                <button id="nav_azul"class = "modificar_categoria" >Modificar Categoria</button>
-                <input type="text">
+                <button id="nav_azul" class = "modificar_categoria" >Modificar Categoria</button>
+                <input  id="nav_azul" class = "buscador" type="text" placeholder="ID/NOMBRE">
+                <button id="nav_azul" class="boton_buscador">Buscar</button>
+                <button id="nav_azul" class="boton_refrescar">Refrescar</button>
 
             </nav>
 
@@ -255,10 +323,9 @@
 
 <script src="{{ asset ('logica/categoria/agregar.js')}}"></script>
 <script src="{{ asset ('logica/categoria/modificar.js')}}"></script>
-
-<!--
--->
 <script src="{{ asset ('logica/categoria/dividir_contenido.js')}}"></script>
+<script src="{{ asset ('logica/categoria/buscador.js')}}"></script>
+<script src="{{ asset ('logica/navegador.js')}}"></script>
 
 </body>
 
