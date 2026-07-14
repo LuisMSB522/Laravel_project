@@ -10,6 +10,10 @@ const hijos = padre ? Array.from(padre.children) : [];
 const paginacion_atras = document.querySelector(".paginacion_atras");
 const paginacion_siguiente = document.querySelector(".paginacion_siguiente");
 
+//vinculado con el documento de busqueda
+var boton_refrescar = document.querySelector(".boton_refrescar");
+
+
 const limite_elementos = 16;
 let paginaActual = 0;
 let totalPaginas = 0;
@@ -36,6 +40,13 @@ paginacion_atras.addEventListener('click', function() {
     }
 });
 
+
+
+boton_refrescar.addEventListener('click', () => {
+
+    paginaActual = 0;
+
+});
 
 
 inicializarPaginacion();
@@ -75,4 +86,7 @@ function inicializarPaginacion() {
     paginaActual = 0;
     mostrarPagina(paginaActual);
 }
+
+
+
 
