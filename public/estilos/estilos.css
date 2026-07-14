@@ -27,15 +27,11 @@ body {
 
 
 
-
-
-
-
 /* ==========================================
    MENÚ LATERAL (sidebar)
    ========================================== 
 */
-.sidebar {
+.panel_control {
     width: 260px;
     background: #0a1020;
     color: #ffffff;
@@ -74,37 +70,27 @@ body {
 
 
 
+/*Navegador*/
 
-
-
-
-/* Navegador (menú de opciones) */
 .navegador {
+    margin: 5%;
     flex: 1;
     padding: 20px 0;
 }
 
-.navegador ul {
+.navegador ul li{
     list-style: none;
 }
 
-.navegador ul li {
-    margin: 4px 12px;
-    border-radius: 8px;
-    transition: background 0.2s;
-}
 
-.navegador ul li:hover {
-    background: rgba(26, 115, 232, 0.2);
-    border-left: 3px solid #1a73e8;
-}
 
-.navegador ul li.active {
-    background: rgba(26, 115, 232, 0.2);
-    border-left: 3px solid #1a73e8;
-}
+.navegador button {
 
-.navegador ul li a {
+    font-weight: bolder;
+    padding: 5%;
+    width: 100%;
+    border: none;
+    background-color: #0a1020;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -112,35 +98,58 @@ body {
     color: #b0c4d8;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 500;
     border-radius: 8px;
-    transition: all 0.2s;
+    transition: all 0.2s;    
+    margin-bottom: 5%;
 }
 
-.navegador ul li a i {
-    width: 20px;
-    font-size: 18px;
-    color: #5a7a9a;
-    transition: color 0.2s;
-}
 
-.navegador ul li:hover a {
+.navegador button:hover, .navegador button.activo {
     color: #ffffff;
-}
+    background: rgba(26, 115, 232, 0.2);
+    border-left: solid 20px #0b6bfd;
 
-.navegador ul li:hover a i {
-    color: #1a73e8;
-}
-
-.navegador ul li.active a {
-    color: #ffffff;
-}
-
-.navegador ul li.active a i {
-    color: #1a73e8;
+    transition: background 1.5s;
+    transition: border-left 0.2s;
 }
 
 
+
+
+
+
+
+/*Navegador secundario Links*/
+
+#direcciones{
+    margin-left: 8%;
+}
+
+#direcciones li{
+    width: 100%;
+    padding: 3%;
+    background: #0a1020;
+    color: white;
+    font-weight: bolder;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 8px;
+    padding-left: 5%;
+    font-size: 14px;
+}
+
+#direcciones li:hover, #direcciones .activo_link{
+    border-left: 20px solid #0b6bfd;
+    background: rgba(26, 115, 232, 0.2);
+
+    transition: border-left 0.2s;
+}
+
+#direcciones a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
 
 
 
