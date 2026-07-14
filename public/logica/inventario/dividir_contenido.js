@@ -13,6 +13,10 @@ const hijos = padre ? Array.from(padre.children) : []; // Convertir a array para
 const anterior = document.querySelector(".paginacion_atras");
 const siguiente = document.querySelector(".paginacion_siguiente");
 
+//vinculado con el documento de buscador
+var boton_refrescar = document.querySelector(".boton_refrescar");
+
+
 // Configuración
 const limite_elementos = 16;
 let paginaActual = 0; 
@@ -41,6 +45,11 @@ anterior.addEventListener('click', function() {
         mostrarPagina(paginaActual);
     }
 });
+
+boton_refrescar.addEventListener('click', () =>{
+    paginaActual = 0;
+});
+
 
 inicializarPaginacion();	//llamando la funcion 
 
